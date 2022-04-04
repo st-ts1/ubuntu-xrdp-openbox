@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t openboxplaywright .
+docker build -t ubuntu-xrdp-openbox .

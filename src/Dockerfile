@@ -21,6 +21,20 @@ RUN rm /etc/alternatives/x-terminal-emulator \
  && rm /usr/bin/x-terminal-emulator \
  && ln -s /etc/alternatives/x-terminal-emulator  /usr/bin/x-terminal-emulator
 
+# For playwright
+#RUN apt update
+#RUN apt-get install -y python3-pip \
+# && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+#RUN pip install playwright
+#RUN playwright install chromium
+#RUN playwright install-deps \
+# && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+
+# playwrightの使い方: playwright codegen --timeout 60000 http://localhost:8080 -o output.py
+
+# For pytest
+#RUN pip install pytest
+
 RUN echo root:secret | chpasswd
 
 # OpenBoxを起動するようにする
